@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Iqbal&apos;s Portfolio",
+  title: "Iqbal's Portfolio",
 };
 import "../styles/globals.css";
 export default function RootLayout({

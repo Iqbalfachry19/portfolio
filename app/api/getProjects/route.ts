@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic' // defaults to force-static
 import { groq } from 'next-sanity';
 import { sanityClient } from '../../../sanity';
 import { Project } from '../../../typings';
+import { NextResponse } from 'next/server';
 const query = groq`
 *[_type == "project"]{
     ...,
@@ -11,7 +12,7 @@ const query = groq`
 export async function GET(request: Request) {
 try {
      const projects: Project[] = await sanityClient.fetch(query);
-    return Response.json({ projects },{
+    return NextResponse.json({ projects },{
         status: 200
     });
   } catch (err) {
