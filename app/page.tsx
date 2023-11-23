@@ -7,11 +7,11 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchPageInfo } from "../utils/FetchPageInfo";
-import { fetchExperiences } from "../utils/FetchExperiences";
-import { fetchProjects } from "../utils/FetchProjects";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchSocials } from "../utils/fetchSocials";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchExperiences } from "../utils/fetchExperiences";
+import { fetchProjects } from "../utils/fetchProjects";
+import { fetchSkills } from "..../utils/fetchPageInfo";
+import { fetchSocials } from "../u../utils/fetchExperiences";
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
