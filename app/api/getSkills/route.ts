@@ -10,7 +10,10 @@ export async function GET(request: Request) {
 try {
      const skills: Skill[] = await sanityClient.fetch(query);
     return NextResponse.json({ skills },{
-        status: 200
+        status: 200,
+        headers: {
+      'Content-Type': 'application/json',
+           }
     });
   } catch (err) {
     console.error('Error fetching or parsing JSON:', err);
