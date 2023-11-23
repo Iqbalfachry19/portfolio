@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { urlFor } from '../sanity';
 import { PageInfo } from '../typings';
@@ -10,7 +9,7 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, The Name's ${pageInfo?.name}`,
+      `Hi, My Name's ${pageInfo?.name}`,
       'Guy-who-loves-Coffee.tsx',
       '<ButLovesToCodeMore />',
     ],

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from 'react-hook-form';
 type Inputs = {
