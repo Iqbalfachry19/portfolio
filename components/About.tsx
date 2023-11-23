@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { PageInfo } from '../typings';
-import { urlFor } from '../sanity';
+"use client";
+import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 type Props = {
   pageInfo: PageInfo;
 };
@@ -26,8 +27,8 @@ const About = ({ pageInfo }: Props) => {
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
-          Here is a{' '}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{' '}
+          Here is a{" "}
+          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
         <p className="text-base">{pageInfo?.backgroundInformation}</p>

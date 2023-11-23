@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { Project } from '../typings';
-import { urlFor } from '../sanity';
+"use client";
+import { motion } from "framer-motion";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 type Props = {
   projects: Project[];
 };
@@ -38,7 +39,7 @@ const Projects = ({ projects }: Props) => {
               <h4 className="text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}:
-                </span>{' '}
+                </span>{" "}
                 {project?.title}
               </h4>
               <div className="flex items-center space-x-2 justify-center">

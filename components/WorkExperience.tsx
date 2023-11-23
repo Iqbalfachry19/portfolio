@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import ExperienceCard from './ExperienceCard';
-import { Experience } from '../typings';
+"use client";
+import { motion } from "framer-motion";
+import ExperienceCard from "./ExperienceCard";
+import { Experience } from "../typings";
 type Props = { experiences: Experience[] };
 
 const WorkExperience = ({ experiences }: Props) => {

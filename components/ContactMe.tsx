@@ -1,5 +1,6 @@
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import { useForm, SubmitHandler } from 'react-hook-form';
+"use client";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   name: string;
   email: string;
@@ -20,7 +21,7 @@ const ContactMe = (props: Props) => {
       </h3>
       <div className="flex flex-col space-y-10  pt-16 ">
         <h4 className="text-2xl font-semibold text-center">
-          I have got just what you need.{' '}
+          I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A] underline">Lets Talk.</span>
         </h4>
         <div className="space-y-5">
@@ -43,13 +44,13 @@ const ContactMe = (props: Props) => {
         >
           <div className="flex space-x-2">
             <input
-              {...register('name')}
+              {...register("name")}
               placeholder="Name"
               className="contactInput"
               type="text"
             />
             <input
-              {...register('email')}
+              {...register("email")}
               placeholder="Email"
               className="contactInput"
               type="email"
@@ -57,13 +58,13 @@ const ContactMe = (props: Props) => {
           </div>
 
           <input
-            {...register('subject')}
+            {...register("subject")}
             placeholder="Subject"
             className="contactInput"
             type="text"
           />
           <textarea
-            {...register('message')}
+            {...register("message")}
             placeholder="Message"
             className="contactInput"
           />

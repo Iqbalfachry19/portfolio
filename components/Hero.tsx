@@ -1,8 +1,9 @@
-import Link from 'next/link';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { urlFor } from '../sanity';
-import { PageInfo } from '../typings';
-import BackgroundCircles from './BackgroundCircles';
+"use client";
+import Link from "next/link";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
+import BackgroundCircles from "./BackgroundCircles";
 type Props = {
   pageInfo: PageInfo;
 };
@@ -10,8 +11,8 @@ const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `Hi, My Name's ${pageInfo?.name}`,
-      'Guy-who-loves-Coffee.tsx',
-      '<ButLovesToCodeMore />',
+      "Guy-who-loves-Coffee.tsx",
+      "<ButLovesToCodeMore />",
     ],
     loop: true,
     delaySpeed: 2000,
