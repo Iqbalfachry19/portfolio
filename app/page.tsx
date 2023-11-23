@@ -10,15 +10,9 @@ import { Experience, PageInfo, Project, Skill, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchProjects } from "../utils/fetchProjects";
-import { fetchSkills } from "..../utils/fetchPageInfo";
-import { fetchSocials } from "../u../utils/fetchExperiences";
-type Props = {
-  pageInfo: PageInfo;
-  experiences: Experience[];
-  skills: Skill[];
-  projects: Project[];
-  socials: Social[];
-};
+import { fetchSkills } from "../utils/fetchPageInfo";
+import { fetchSocials } from "../utils/fetchExperiences";
+
 const Home = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
