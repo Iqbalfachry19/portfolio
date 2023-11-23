@@ -13,7 +13,7 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 import { urlFor } from "../sanity";
-
+export const dynamic = "force-dynamic";
 const Home = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
