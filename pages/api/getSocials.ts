@@ -14,6 +14,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const socials: Social[] = await sanityClient.fetch(query);
-  res.status(200).json({ socials });
+  try {
+    const socials: Social[] = await sanityClient.fetch(query);
+    res.status(200).json({ socials });
+  } catch (err) {
+    console.error('Error fetching or parsing JSON:', err);
+  }
 }

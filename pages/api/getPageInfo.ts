@@ -14,6 +14,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const pageInfo: PageInfo = await sanityClient.fetch(query);
-  res.status(200).json({ pageInfo });
+  try {
+    const pageInfo: PageInfo = await sanityClient.fetch(query);
+    res.status(200).json({ pageInfo });
+  } catch (err) {
+    console.error('Error fetching or parsing JSON:', err);
+  }
 }
