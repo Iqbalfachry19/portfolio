@@ -1,6 +1,8 @@
 "use client";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { PageInfo } from "../typings";
 type Inputs = {
   name: string;
   email: string;
@@ -9,11 +11,12 @@ type Inputs = {
 };
 type Props = {};
 
-const ContactMe = (props: Props) => {
+const ContactMe = async (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:iqbal.fachry19@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}, ${formData.message} (${formData.email})`;
   };
+  const pageInfo: PageInfo = await fetchPageInfo();
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -27,15 +30,15 @@ const ContactMe = (props: Props) => {
         <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
-            <p className="text-xl">+6281932377234</p>
+            <p className="text-xl">{pageInfo?.phoneNumber}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
-            <p className="text-xl">iqbal.fachry19@gmail.com</p>
+            <p className="text-xl">{pageInfo?.email}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
-            <p className="text-xl">Indonesia</p>
+            <p className="text-xl">{pageInfo?.address}</p>
           </div>
         </div>
         <form
