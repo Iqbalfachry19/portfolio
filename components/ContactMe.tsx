@@ -9,7 +9,9 @@ type Inputs = {
   subject: string;
   message: string;
 };
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
 const ContactMe = async (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();

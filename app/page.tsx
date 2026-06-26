@@ -39,7 +39,7 @@ const Home = async () => {
         <Projects projects={projects} />
       </section>
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
