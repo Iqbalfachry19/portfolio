@@ -13,12 +13,12 @@ type Props = {
   pageInfo: PageInfo;
 };
 
-const ContactMe = async (props: Props) => {
+const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:iqbal.fachry19@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}, ${formData.message} (${formData.email})`;
   };
-  const pageInfo: PageInfo = await fetchPageInfo();
+  const pageInfo: PageInfo = props.pageInfo;
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
