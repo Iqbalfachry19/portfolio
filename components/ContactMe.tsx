@@ -35,7 +35,7 @@ const ContactMe = (props: Props) => {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
-            <p className="text-xl">Jl Jendral Sudirman</p>
+            <p className="text-xl">Indonesia</p>
           </div>
         </div>
         <form
