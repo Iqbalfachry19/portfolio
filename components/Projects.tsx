@@ -54,6 +54,18 @@ const Projects = ({ projects }: Props) => {
               <p className="text-lg text-center md:text-left">
                 {project?.summary}
               </p>
+              {project?.linkToBuild && (
+                <div className="flex justify-center mt-6">
+                  <a
+                    href={project.linkToBuild}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-lg bg-[#F7AB0A] text-black font-semibold hover:bg-[#f8b92e] transition-colors"
+                  >
+                    View Project →
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}
