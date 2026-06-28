@@ -30,10 +30,10 @@ const ContactMe = (props: Props) => {
           <span className="decoration-[#F7AB0A] underline">Lets Talk.</span>
         </h4>
         <div className="space-y-5">
-          <div className="flex items-center space-x-5 justify-center">
+          {/* <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
             <p className="text-xl">{pageInfo?.phoneNumber}</p>
-          </div>
+          </div> */}
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-6 w-6 animate-pulse" />
             <p className="text-xl">{pageInfo?.email}</p>
