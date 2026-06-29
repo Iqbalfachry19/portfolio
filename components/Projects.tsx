@@ -28,7 +28,7 @@ const Projects = ({ projects }: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="w-full max-w-[280px] sm:max-w-md h-44 sm:h-64 md:h-80 object-cover rounded-lg"
+              className="w-full max-w-[280px] sm:max-w-md max-h-52 sm:max-h-72 md:max-h-80 object-contain rounded-lg"
               src={urlFor(project?.image).url()}
               alt=""
             />
