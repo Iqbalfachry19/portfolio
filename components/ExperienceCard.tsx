@@ -11,7 +11,7 @@ type Props = {
 const ExperienceCard = ({ experience }: Props) => {
   return (
     <article className="hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden opacity-40 mt-10 flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[320px] sm:w-[400px] md:w-[500px] xl:w-[800px] snap-center bg-[#292929] p-6 sm:p-10">
-      {experience?.companyImage ? (
+      {experience?.companyImage && (
         <motion.img
           initial={{ y: -80, opacity: 0 }}
           transition={{ duration: 1.2 }}
@@ -21,16 +21,6 @@ const ExperienceCard = ({ experience }: Props) => {
           alt={experience.company}
           className="w-14 h-14 sm:w-16 sm:h-16 xl:w-[100px] xl:h-[100px] rounded-full object-cover object-center"
         />
-      ) : (
-        <motion.div
-          initial={{ y: -80, opacity: 0 }}
-          transition={{ duration: 1.2 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="w-14 h-14 sm:w-16 sm:h-16 xl:w-[100px] xl:h-[100px] rounded-full bg-gray-700 flex items-center justify-center text-white text-2xl font-bold"
-        >
-          {experience.company?.charAt(0).toUpperCase()}
-        </motion.div>
       )}
 
       <div className="px-0 md:px-10 w-full">
