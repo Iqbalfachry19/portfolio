@@ -8,21 +8,11 @@ type Props = {
 };
 const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center p-5">
+    <header className="sticky top-0 flex items-center justify-between max-w-7xl mx-auto z-20 p-4 sm:p-5">
       <motion.div
-        initial={{
-          x: -500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.5,
-        }}
+        initial={{ x: -500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
         className="flex flex-row items-center"
       >
         {socials.map((social) => (
@@ -31,24 +21,17 @@ const Header = ({ socials }: Props) => {
             fgColor="gray"
             bgColor="transparent"
             url={social.url}
+            style={{ height: 36, width: 36 }}
+            className="sm:!h-12 sm:!w-12"
           />
         ))}
       </motion.div>
+
       <Link href="#contact">
         <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
+          initial={{ x: 500, opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
           className="flex flex-row items-center text-gray-300 cursor-pointer"
         >
           <SocialIcon
@@ -56,8 +39,9 @@ const Header = ({ socials }: Props) => {
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            style={{ height: 36, width: 36 }}
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 ">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
           </p>
         </motion.div>
@@ -65,5 +49,4 @@ const Header = ({ socials }: Props) => {
     </header>
   );
 };
-
 export default Header;
